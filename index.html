@@ -47,6 +47,7 @@
         var cube2 = new THREE.Mesh(cubeGeometry, cubeMaterial);
         cube2.name = 'cube2';
         scene.add(cube2);
+        //crear cubo 3
         var cubeGeometry = new THREE.BoxGeometry(1, 1 ,1);
         var cubeMaterial = new THREE.MeshNormalMaterial();
         cubeMaterial.transparent = true;
@@ -68,7 +69,7 @@
         document.body.appendChild(renderer.domElement);
 
        
-		//Agregar matrices para cubo 2.
+		//Agregar matrices para cubo 2.     lo hice con matrices para que cada cubo tuviera su movimiento y escalado propio
         var matrizT = new THREE.Matrix4();
         
         matrizT.set(1,0,0,0,
@@ -82,7 +83,7 @@
         var matrizS = new THREE.Matrix4();
         
         
-         matrizS.set(0.5,0,0,0,
+         matrizS.set(0.5,0,0,0,     //los valores del escalado son 0.5 y0.25 para que sean respectivamente la mitad del cubo anterior
                     0,0.5,0,0,
                     0,0,0.5,0,
                     0,0,0,1);
@@ -104,7 +105,7 @@
         var matrizS2 = new THREE.Matrix4();
         
         
-         matrizS2.set(0.25,0,0,0,
+         matrizS2.set(0.25,0,0,0,  //los valores del escalado son 0.5 y0.25 para que sean respectivamente la mitad del cubo anterior
                     0,0.25,0,0,
                     0,0,0.25,0,
                     0,0,0,1);
